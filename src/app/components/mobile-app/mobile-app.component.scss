@@ -1,0 +1,74 @@
+@import '../../shared/styles/variables';
+
+.mobile-app {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f3f4;
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .image {
+      flex: 1;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .bold-modern {
+      font-weight: bold;
+      font-family: 'Arial', sans-serif; 
+      font-size: 1.2em; 
+      color: #333; 
+    }
+    
+    .details {
+      flex: 1;
+      padding: 20px;
+      text-align: left;
+
+      h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #b2392f;
+      }
+
+      p {
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      ul {
+        padding-left: 20px;
+        margin-bottom: 20px;
+
+        li {
+          font-size: 16px;
+          margin-bottom: 10px;
+          list-style: none;
+
+          span {
+            color: #b2392f;
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .store-buttons {
+        display: flex;
+        justify-content: flex-start;
+
+        img {
+          margin: 10px;
+          width: 150px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

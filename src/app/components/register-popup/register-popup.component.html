@@ -1,0 +1,79 @@
+<div class="register-popup">
+  <div class="popup-content">
+    <img src="/assets/closepopup.png" alt="Close" class="close-btn" (click)="onClosePopup()" />
+    <h2>Create Your Account</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.</p>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="username">User name</label>
+        <input type="text" id="username" placeholder="Enter your user name" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" id="email" placeholder="Enter your email address" />
+      </div>
+      <div class="form-group">
+        <label for="country">Country</label>
+        <select id="country">
+          <option value="UK">UK</option>
+          <option value="EUR">EUR</option>
+          <option value="KSR">KSR</option>
+          <option value="EGP">EGP</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of birth</label>
+        <div class="dob-group">
+          <input type="text" id="day" placeholder="DD" maxlength="2" pattern="\d{1,2}" />
+          <select id="month">
+            <option value="" disabled selected>Month</option>
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+          </select>
+          <select id="year">
+            <option value="" disabled selected>YYYY</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="password-group">
+          <input type="password" id="password" placeholder="Enter your password" />
+          <span class="toggle-password" (click)="togglePasswordVisibility('password')">
+            <img src="/assets/passpic.png" alt="Show/Hide Password" />
+          </span>
+        </div>
+        <div *ngIf="passwordError" class="password-error">
+          {{ passwordError }}
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm password</label>
+        <div class="password-group">
+          <input type="password" id="confirm-password" placeholder="Confirm your password" />
+          <span class="toggle-password" (click)="togglePasswordVisibility('confirm-password')">
+            <img src="/assets/passpic.png" alt="Show/Hide Password" />
+          </span>
+        </div>
+        <div *ngIf="confirmPasswordError" class="password-error">
+          {{ confirmPasswordError }}
+        </div>
+      </div>
+      <p class="note">The password should be at least eight characters long. To make it stronger, use upper and lower case letters, numbers, and symbols like ! " ? $ % ^ & ).</p>
+      <button type="submit">Create Account</button>
+      <div class="login-link">
+        <span>Already have an account? </span><a href="#">Login</a>
+      </div>
+    </form>
+  </div>
+</div>

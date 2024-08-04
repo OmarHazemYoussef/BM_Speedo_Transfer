@@ -1,0 +1,9 @@
+@import './shared/styles/variables';
+
+body {
+    font-family: Arial, sans-serif;
+    color: $text-color;
+    background-color: $background-color;
+    margin: 0;
+    padding: 0;
+}

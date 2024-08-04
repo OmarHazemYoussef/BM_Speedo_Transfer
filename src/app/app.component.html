@@ -1,0 +1,8 @@
+<div class="app">
+  <app-header (registerClicked)="toggleRegisterPopup()"></app-header>
+  <app-home></app-home>
+  <app-register-popup *ngIf="showRegisterPopup" (closePopup)="onCloseRegisterPopup()"></app-register-popup>
+  <app-getting-started></app-getting-started>
+  <app-mobile-app></app-mobile-app>
+  <app-footer></app-footer>
+</div>
