@@ -1,15 +1,15 @@
 <div class="login-container">
     <h1>Login</h1>
     <p>New here? <a routerLink="/signup">Sign Up</a></p>
-    <div class="login-form-box">
+    <div class="login-box">
         <h2>Log In</h2>
-        <p>Glad to see you again! Please log in to continue.</p>
-        <form [formGroup]="loginForm" (ngSubmit)="handleSubmit()">
+        <p>Welcome back! Please log in to continue.</p>
+        <form (ngSubmit)="onSubmit()">
             <label for="email">Email Address</label>
             <input type="email" id="email" formControlName="email" placeholder="you@example.com" required>
             
             <label for="password">Password</label>
-            <div class="password-wrapper">
+            <div class="password-container">
                 <input [type]="passwordFieldType" id="password" formControlName="password" placeholder="Your Password" required>
                 <span class="password-toggle" (click)="togglePasswordVisibility()">{{ passwordIcon }}</span>
             </div>
@@ -18,4 +18,10 @@
         </form>
         <p>Don't have an account? <a routerLink="/signup">Create one now</a></p>
     </div>
+</div>
+
+<div *ngIf="showAlert" class="alert">
+    <span class="alert-icon">!</span>
+    <span class="alert-message">We logged you out because you were inactive for 5 minutes - it’s to help your account stay secure.</span>
+    <span class="close-btn" (click)="closeAlert()">&times;</span>
 </div>
