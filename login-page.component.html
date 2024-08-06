@@ -1,0 +1,23 @@
+<div class="alert" *ngIf="showAlert">
+    <span class="alert-icon">!</span>
+    <span class="alert-message">
+        We logged you out because you were inactive for 5 minutes. This helps keep your account secure.
+    </span>
+    <span class="close-btn" (click)="closeAlert()">&times;</span>
+</div>
+<div class="login-container">
+    <h2>Welcome back</h2>
+    <p>Login to your account</p>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <label for="email">Your email address</label>
+        <input type="email" id="email" formControlName="email" placeholder="Email@gmail.com" />
+        
+        <label for="password">Password</label>
+        <input type="password" id="password" formControlName="password" placeholder="••••••••" />
+        
+        <button type="submit">Login</button>
+    </form>
+    <p class="signup-link">
+        Don’t have an account? <a [routerLink]="['/register']">Create Account</a>
+    </p>
+</div>

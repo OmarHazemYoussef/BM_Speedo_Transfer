@@ -1,0 +1,94 @@
+:host {
+  display: block;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.login-container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.login-container p a {
+  color: #555;
+  text-decoration: none;
+}
+
+.login-form-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: left;
+}
+
+.login-form-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.login-form-box p {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.login-form-box label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-form-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 40px;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.login-form-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #800020;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.login-form-box button:hover {
+  background-color: #a00028;
+}
+
+.login-form-box p a {
+  color: #800020;
+  text-decoration: none;
+}
